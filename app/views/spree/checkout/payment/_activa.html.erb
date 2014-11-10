@@ -1,2 +1,22 @@
-<!--  render klarna snippet -->
 <%= link_to t(:proceed_to_activa_payment),activa_init_path(id: payment_method.id), class: 'button' %>
+
+
+<script type="text/javascript">
+$(function() {
+  var spreePaymentRadio = $("#payment-method-fields input:radio")
+
+  var hideCheckoutButtonForActiva = function() {
+    if ($("#payment-method-fields input:radio:checked").val() == <%= payment_method.id %>) {
+      $("#checkout_form_payment .form-buttons").hide();
+    } else {
+      $("#checkout_form_payment .form-buttons").show();
+    }
+  }
+
+  spreePaymentRadio.change(function() {
+    hideCheckoutButtonForActiva();
+  });
+
+  hideCheckoutButtonForActiva();
+});
+</script>

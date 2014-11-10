@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_activa'
   s.version     = '2.3.1'
-  s.summary     = 'Activa payment integration as Spree extestion'
+  s.summary     = 'Activa payment integration as Spree extension'
   s.description = ''
   s.required_ruby_version = '>= 1.9.3'
 
